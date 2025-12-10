@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sage's Questions - An Interactive Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="stars"></div>
+    <div class="lantern" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="lantern" style="left: 30%; animation-delay: 5s;"></div>
+    <div class="lantern" style="left: 50%; animation-delay: 10s;"></div>
+    <div class="lantern" style="left: 70%; animation-delay: 15s;"></div>
+    <div class="lantern" style="left: 90%; animation-delay: 20s;"></div>
+
+    <div class="game-container">
+        <!-- Title Screen -->
+        <div id="title-screen" class="title-screen">
+            <h1 class="game-title">Classical Chinese Philosophy Assessment</h1>
+            <p class="subtitle">A scientific analysis of your ethical intuitions and philosophical alignment</p>
+            <p class="subtitle" style="font-size: 0.9em; opacity: 0.7; margin-top: 10px;">12 questions • Unbiased assessment • Statistical results</p>
+            <button class="start-btn" onclick="startGame()">Begin Assessment</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="hidden">
+            <div class="scene-indicator">
+                <div class="indicator-dot" id="ind-1"></div>
+                <div class="indicator-dot" id="ind-2"></div>
+                <div class="indicator-dot" id="ind-3"></div>
+                <div class="indicator-dot" id="ind-4"></div>
+                <div class="indicator-dot" id="ind-5"></div>
+            </div>
+
+            <div class="sage-container">
+                <div class="sage" id="sage">
+                    <div class="sage-hat"></div>
+                    <div class="sage-head">
+                        <div class="sage-eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                    </div>
+                    <div class="sage-beard"></div>
+                    <div class="sage-body"></div>
+                    <div class="sage-arms">
+                        <div class="arm left"></div>
+                        <div class="arm right"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="speech-bubble">
+                <p class="sage-text" id="sage-text"></p>
+            </div>
+
+            <div class="choices" id="choices"></div>
+
+            <div class="wisdom-meter">
+                <div class="wisdom-orb" id="orb-1"></div>
+                <div class="wisdom-orb" id="orb-2"></div>
+                <div class="wisdom-orb" id="orb-3"></div>
+                <div class="wisdom-orb" id="orb-4"></div>
+                <div class="wisdom-orb" id="orb-5"></div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="results-container hidden">
+            <h2 class="result-title">Assessment Results</h2>
+            
+            <div class="philosophy-reveal">
+                <h3 class="philosophy-name" id="philosophy-name"></h3>
+                <div class="trait-list" id="trait-list"></div>
+                <p class="philosophy-description" id="philosophy-description"></p>
+            </div>
+
+            <button class="restart-btn" onclick="restartGame()">Retake Assessment</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
